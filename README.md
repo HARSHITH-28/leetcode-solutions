@@ -1,2 +1,2 @@
-# leetcode-problems
-LeetCode problems submissions Tracker
+# leetcode-solutions
+LeetCode solutions submissions Tracker
