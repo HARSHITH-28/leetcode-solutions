@@ -1,12 +1,12 @@
-// Last updated: 3/16/2026, 10:48:03 PM
+// Last updated: 3/16/2026, 10:55:18 PM
 1class Solution {
 2public:
-3    vector<int> getConcatenation(vector<int>& nums) {
-4        int n=nums.size();
-5        vector<int> v(n*2);
-6        for(int i=0;i<n;i++){
-7            v[i]=v[i+n]=nums[i];
+3    vector<int> shuffle(vector<int>& nums, int n) {
+4        vector<int> res;
+5        for(int i=0;i<n;i++){
+6            res.push_back(nums[i]);
+7            res.push_back(nums[i+n]);
 8        }
-9        return v;
+9        return res;
 10    }
 11};
