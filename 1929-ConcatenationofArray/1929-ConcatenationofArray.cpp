@@ -1,12 +1,16 @@
-// Last updated: 3/16/2026, 10:55:18 PM
+// Last updated: 3/16/2026, 10:55:29 PM
 1class Solution {
 2public:
-3    vector<int> shuffle(vector<int>& nums, int n) {
-4        vector<int> res;
+3    int findMaxConsecutiveOnes(vector<int>& nums) {
+4        int count=0,temp=0,n=nums.size();
 5        for(int i=0;i<n;i++){
-6            res.push_back(nums[i]);
-7            res.push_back(nums[i+n]);
-8        }
-9        return res;
-10    }
-11};
+6            if(nums[i]==1){
+7                temp++;
+8                count=max(count,temp);
+9            }
+10            else
+11                temp=0;
+12        }
+13        return count;
+14    }
+15};
