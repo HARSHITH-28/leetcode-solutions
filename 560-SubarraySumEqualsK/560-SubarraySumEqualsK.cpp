@@ -1,4 +1,4 @@
-// Last updated: 4/17/2026, 4:28:34 PM
+// Last updated: 4/19/2026, 2:22:42 PM
 1class Solution {
 2public:
 3    int subarraySum(vector<int>& nums, int k) {
@@ -8,7 +8,7 @@
 7        mp[0]=1;
 8        for(int i=0;i<nums.size();i++){
 9            sum+=nums[i];
-10            if(mp.find(sum-k)!=mp.end()) res+=mp[sum-k];
+10            res+=mp[sum-k];
 11            mp[sum]++;
 12        }
 13        return res;
