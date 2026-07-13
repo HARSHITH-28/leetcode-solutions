@@ -1,4 +1,4 @@
-// Last updated: 7/13/2026, 4:15:26 PM
+// Last updated: 7/13/2026, 4:20:04 PM
 1class Solution {
 2public:
 3    int numRescueBoats(vector<int>& people, int limit) {
@@ -11,12 +11,10 @@
 10                l++;
 11                r--;
 12            }
-13            else if(people[r]<=limit){
-14                r--;
-15            }
-16            else {l++;}
-17            res++;
-18        }
-19        return res;
-20    }
-21};
+13            else if(people[r]<=limit) r--;
+14            else l++;
+15            res++;
+16        }
+17        return res;
+18    }
+19};
